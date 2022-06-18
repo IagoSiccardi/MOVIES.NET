@@ -3,14 +3,29 @@
 <%- include("./partials/head.ejs",{
   title: "MOVIES.NET | HOME"
 }) %> 
-<body>
+<body class="index_body">
  <%- include("./partials/header.ejs") %> 
   <main class="index_main">
     <section class="cards_section">
-      <article class="card"></article>
-      <article class="card"></article>
-      <article class="card"></article>
+      <article class="card">
+        <div class="card_container">
+          <span>Generos</span>
+        </div>        
+      </article>
+
+      <article class="card">
+        <div class="card_container">
+          <span>Peliculas</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card_container">
+          <span>Estrenos</span>
+        </div>
+      </article>
     </section>
-  </main> 
+  </main>
+  <!-- <%- include("./partials/footer.ejs") %>   -->
 </body>
 </html>
