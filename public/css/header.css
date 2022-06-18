@@ -1,0 +1,152 @@
+.header{
+    background: rgb(253,29,240);
+    background: linear-gradient(101deg, rgba(253,29,240,1) 0%, rgba(160,29,253,1) 49%, rgba(81,0,255,1) 100%);
+    
+    padding: 20px;
+}
+
+.header_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_logo {
+    width: 33%;
+}
+
+.header_logo a span {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+
+
+.header_logo a span:hover {
+    transform: scale(1.1);
+    color: black;
+}
+
+.header_paginas {
+    display: none;
+    gap: 10px;
+    width: 33%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.header_paginas li a{
+    color: white;
+    font-weight: 500;
+    
+}
+
+.header_paginas li {
+    transition: .5s;
+}
+
+.header_paginas li:hover {
+    
+    transform: scale(1.1);
+    
+}
+
+
+
+.header_usuario {
+    display: none;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-end;
+    width: 33%;
+    
+} 
+
+.header_usuario ul {
+    display: flex;
+    gap: 10px;
+    font-weight: 500;
+}
+
+
+.header_usuario li {
+    transition: .5s;
+}
+
+
+.header_usuario li:hover {
+    
+    transform: scale(1.1);
+}
+
+.header_usuario li a {
+    color: white;
+}
+
+.header_search {
+    display: none;
+    position: relative;
+    
+}
+
+.header_search input {
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    min-width: 200px;
+}
+
+.header_search button {
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    background-color: transparent;
+    border: none;
+    right: 10px;
+}
+
+.header_menu {
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    transition: .5s;
+
+}    
+
+.header_menu:hover {
+    transform: scale(1.1);
+}
+
+
+@media (min-width:480px) {
+
+    .header_menu {
+        display: none;
+    }    
+
+        
+    .header_paginas {
+        display: flex;   
+    }
+
+    .header_usuario{
+        display: flex;
+    }
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1024px) {
+    .header_search {
+        display: flex;
+        position: relative;
+    }
+}
