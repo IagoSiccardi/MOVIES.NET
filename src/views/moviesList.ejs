@@ -8,23 +8,29 @@
 <body>
     <%- include("./partials/header.ejs") %> 
 
-    <main class="">
-        <h2 class="text-center">LISTADO DE PELÍCULAS</h2>
-        <a  href="/movies/add">Agregar Película</a></p>
+    <main class="movies_main">
+        <h2 class="movies_h2">Peliculas</h2>
+
+        
+        <section class="movies_section">
     
-        <section class="p-3 ">
-    
-            <ul class="">
+            <ul class="movies_list">
                 <% for( let i = 0; i < movies.length; i++ ) { %>
                 <li class="text-blue-700">
                     <a class="" href="/movies/detail/<%= movies[i].id %>"><%= movies[i].title %></a>
                 </li>
                 <% } %>
-        
+                
             </ul>
+
+            <div class="section_image">
+                
+            </div>
         </section>
 
     </main>
+
+    <%- include("./partials/footer.ejs") %> 
 </body>
 
 </html>
