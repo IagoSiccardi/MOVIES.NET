@@ -9,16 +9,30 @@
 
     <%- include("./partials/header.ejs") %> 
 
-   
-    <h1>LISTADO DE GENEROS</h1>
-    <ul>
-        <% for( let i = 0; i < genres.length; i++ ) { %>
-        <li>
-            <a href="/genres/detail/<%= genres[i].id %>"><%= genres[i].name %></a>
-        </li>
-        <% } %>
+   <main class="genres_main">
 
-    </ul>
+       <h2 class="genres_h2">Generos</h2>
+
+       <section class="genres_section">
+
+           
+               <% for( let i = 0; i < genres.length; i++ ) { %>
+                <article class="card">
+                    <a href="/genres/detail/<%= genres[i].id %> ">
+                        <img src="/img/genres/<%= genres[i].file %>" alt="">
+                        
+                        <li>
+                            <a><%= genres[i].name %></a>
+                        </li>
+
+                    </a>
+                    
+                </article>
+               <% } %>
+       
+       </section>
+   </main>
+   <%- include("./partials/footer.ejs") %> 
 </body>
 
 </html>

@@ -11,6 +11,9 @@ module.exports = (sequelize, dataTypes) => {
         },
         ranking: {
             type: dataTypes.INTEGER
+        },
+        file: {
+            type: dataTypes.STRING
         }
     };
     let config = {
