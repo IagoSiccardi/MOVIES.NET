@@ -11,6 +11,20 @@
     <main class="movies_main">
         <h2 class="movies_h2">Peliculas</h2>
 
+        <section class="movies_cards">
+            <% for( let i = 0; i < movies.length; i++ ) { %>
+                
+                <article class="card">
+                    <a href="/movies/detail/<%= movies[i].id %>">
+                        <img src="/img/movies/<%= movies[i].image %> " alt="">
+                    </a>
+                    <span><%= movies[i].title %> </span>
+                </article>
+
+
+            <% } %>
+        </section>
+
         
         <section class="movies_section">
     

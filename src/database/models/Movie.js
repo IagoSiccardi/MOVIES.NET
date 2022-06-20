@@ -24,6 +24,11 @@ module.exports = (sequelize, dataTypes) => {
         genre_id : {
             type: dataTypes.INTEGER.UNSIGNED,
             
+        },
+        image :{
+             
+                type: dataTypes.STRING
+        
         }
     };
     let config = {
