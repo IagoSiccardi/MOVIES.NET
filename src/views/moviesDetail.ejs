@@ -5,16 +5,37 @@
       }) %> 
 <body>
     <%- include("./partials/header.ejs") %> 
-  
-    <h1><%= movie.title %> </h1>    
-    <br>
-    <p>RATING: <%= movie.rating %> </p>
-    <p>AWARDS: <%= movie.awards %> </p>
-    <p>LENGTH: <%= movie.length + ' min'%> </p>
-    <p>RELEASE DATE: <%= movie.release_date %> </p>
 
-    <br>
+    <main class="moviesDetail_main">
+        <h1><%= movie.title %> </h1>    
+        <section class="moviesDetail_section">
+            <article>
+                <a href="" class="moviePlay">
+                    <i class="fas fa-play"></i>
+                </a>
+            </article>
 
-    <a href="/movies/edit/<%= movie.id %> ">Editar</a>
+        </section>
+
+        <section class="moviesDetail_description">
+
+            <div class="description">
+                <p><%= movie.description %> </p>
+                <p>Fecha de estreno: <%= release_date %> </p>
+                <p>Duracion: <%= movie.length + ' min'%> </p>
+                <p>Calificación: <%= movie.rating %> </p>
+                <p>Premios: <%= movie.awards %> </p>
+            </div>
+            <div class="img_container">
+                <img src="/img/movies/<%= movie.image %> " alt="">
+            </div>
+
+        </section>
+
+        <br>
+
+    </main>
+
+    <%- include("./partials/footer.ejs") %> 
 </body>
 </html>

@@ -23,6 +23,34 @@
 .movies_cards {
     border-bottom: solid 4px rgba(110,22,191,1);
     margin: 50px 0;
+    position: relative
+}
+
+  .go_top {
+    position: fixed;
+    bottom :50px ;
+    right: calc(50% - 40px);
+    background-color:  rgba(110,22,191,1);
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+
+}
+
+ .go_top:hover {
+    transform: translateY(-20px);
+    background-color: rgb(253,29,240);;
+}
+
+ .go_top i {
+    font-size: 40px;
+    transform: rotate(180deg);
+    color: white;
+    
 }
 
 .movies_cards .card {
@@ -115,6 +143,11 @@
         grid-column-gap: 20px;
         grid-row-gap: 20px;
        
+    }
+
+    .go_top {
+    
+        right: 100px;
     }
 
 }

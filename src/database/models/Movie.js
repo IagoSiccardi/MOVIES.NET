@@ -29,6 +29,9 @@ module.exports = (sequelize, dataTypes) => {
              
                 type: dataTypes.STRING
         
+        },
+        description: {
+            type: dataTypes.STRING
         }
     };
     let config = {

@@ -1,0 +1,133 @@
+.moviesDetail_main {
+    margin: 50px 5%;
+}
+
+.moviesDetail_main h1 {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.moviesDetail_main .moviesDetail_section {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moviesDetail_main .moviesDetail_section article {
+    background-color: black;
+    width: 100%;
+    height: 25vh;
+    position: relative;
+}
+
+.moviesDetail_main .moviesDetail_section article .moviePlay {
+    background-color: white;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 75px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.moviesDetail_main .moviesDetail_section article .moviePlay i {
+    color: black;
+    font-size: 75px;
+}
+
+.moviesDetail_description {
+    margin-top: 50px ;
+    
+}
+
+.moviesDetail_description .img_container {
+    width: 100%;
+}
+
+
+.moviesDetail_description .img_container img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.moviesDetail_description .description {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.moviesDetail_description .description p:first-child{
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+
+@media (min-width:480px) {
+
+    .moviesDetail_main h1 {
+        text-align: left;
+        color: white;
+        font-size: 3rem;
+        margin-bottom: 25px;
+    }
+
+
+    .moviesDetail_main .moviesDetail_section article {
+        background-color: black;
+        width: 100%;
+        height: 30vh;
+        position: relative;
+    }
+}
+
+@media (min-width:768px) {
+    
+    .moviesDetail_main .moviesDetail_section article {
+        background-color: black;
+        width: 100%;
+        height: 40vh;
+        position: relative;
+    }
+
+    .moviesDetail_description .description {
+        font-size: 18px;
+        color: white;
+        margin-bottom: 10px;
+        width: 50%;
+    }
+
+   
+
+    .moviesDetail_description .img_container {
+        width: 45%;
+    }
+
+    .moviesDetail_description {
+        margin-top: 50px ;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+
+  
+    
+}
+
+@media (min-width:1024px) {
+    .moviesDetail_main .moviesDetail_section article {
+        background-color: black;
+        width: 100%;
+        height: 70vh;
+        position: relative;
+    }
+}

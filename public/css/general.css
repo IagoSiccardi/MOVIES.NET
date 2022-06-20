@@ -2,6 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -12,6 +17,19 @@ body {
     min-height: 100vh;
     padding-bottom: 4rem;
 }
+
+body::-webkit-scrollbar {
+    
+    background-color:  rgba(110,22,191,1);
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    
+    background-color: rgb(253,29,240);
+    background-clip: content-box;
+}
+
 
 a {
     text-decoration: none;

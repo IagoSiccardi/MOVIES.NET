@@ -12,8 +12,16 @@ const moviesController = {
     });
   },
   detail: (req, res) => {
+
+    
+
     db.Movie.findByPk(req.params.id).then((movie) => {
-      res.render("moviesDetail.ejs", { movie });
+
+      const release_date= moment(db.Movie.release_date).format("YYYY-MM-DD")
+
+      res.render("moviesDetail.ejs", { movie,
+        release_date
+      });
     });
   },
   new: (req, res) => {
