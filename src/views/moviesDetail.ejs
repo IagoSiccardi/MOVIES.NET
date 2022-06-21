@@ -25,6 +25,7 @@
                 <p>Duracion: <%= movie.length + ' min'%> </p>
                 <p>Calificación: <%= movie.rating %> </p>
                 <p>Premios: <%= movie.awards %> </p>
+                <a href="/movies/edit/<%= movie.id %> ">Editar pelicula</a>
             </div>
             <div class="img_container">
                 <img src="/img/movies/<%= movie.image %> " alt="">

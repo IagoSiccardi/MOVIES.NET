@@ -62,6 +62,7 @@ const moviesController = {
 
     db.Movie.create({
       title: title.trim(),
+      description : description.trim(),
       rating: +rating,
       awards: +awards,
       release_date,
@@ -101,6 +102,7 @@ const moviesController = {
         release_date,
         length: +length,
         genre_id: +genre_id,
+        description: description.trim()
       },
       {
         where: { id: req.params.id },

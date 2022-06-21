@@ -7,34 +7,80 @@
 
 <body>
     <%- include("./partials/header.ejs") %> 
-   
-    <h1 class="titulo">Película a Editar:  <%= Movie.title %></h1>
-    <section class="formulario">
-        <form action="/movies/update/<%= Movie.id %>?_method=PUT" method="post">
-            <label for="title">Title </label>
-            <p><input type="text" name="title" id="title" value="<%= Movie.title %>" required></p>
-            <label for="rating">Rating </label>
-            <p><input type="number" name="rating" id="rating" value="<%= Movie.rating %>" required></p>
-            <label for="awards">Awards </label>
-            <p><input type="number" name="awards" id="awards" value="<%= Movie.awards %>" required></p>
-            <label for="release_date">Release date </label>
-            <p><input type="date" name="release_date" id="release_date" value="<%=release_date %>" required></p>
-            <label for="length">Length </label>
-            <p><input type="number" name="length" id="" value="<%= Movie.length %>" required></p>
-            <select name="genre_id" id="">
-                <option value="" hidden selected>Seleccionar genero</option>
-                <% genres.forEach(genre => { %>
-                    <option value=" <%=genre.id%>" <%= genre.id === Movie.genre_id && 'selected' %>><%=genre.name %></option>
-                    
-                <% }) %>
-            </select>
-
-            <br>
-            <p> <button class="botonAgregar" type="submit">Actualizar</button>
+    <main class="formulario_main">
         
-            <a  class="botonVolver" href="/movies">Listado de Películas</a></p>
-        </form>
-    </section>
+        <h2 class="titulo">Editar Película</h2>
+        <section class="formulario_section">
+            <form action="/movies/create" method="POST">
+                <div class="form_div">
+                    <label for="title">Titulo</label>
+                    <input type="text" name="title" id="" value="<%= Movie.title %>">
+    
+                </div>
+    
+                <div class="form_div">
+                    <label for="rating">Calificación</label>
+                    <input type="number" name="rating" id="" value="<%= Movie.rating %>">
+    
+                </div>
+    
+                <div class="form_div">
+                    <label for="awards">Premios</label>
+                    <input type="number" name="awards" id="" value="<%= Movie.awards %>">
+    
+                </div>
+    
+                <div class="form_div">
+                    <label for="release_date">Fecha de estreno</label>
+                    <input type="date" name="release_date" id="" value="<%= release_date %>">
+    
+                </div>
+    
+                <div class="form_div">
+                    <label for="length">Duración</label>
+                    <input type="number" name="length" id="" value="<%= Movie.length %>">
+    
+                </div>
+                
+                <div class="form_div">
+                    <label for="length">Descripción</label>
+                    <textarea name="description" id=""><%= Movie.description %> </textarea>
+                    
+                </div>
+
+                <div class="form_div">
+                    <label for="file" class="label_file">Seleccione una imagen <i class="fas fa-camera"></i></label>
+                    <input type="file" class="input_file" name="length" id="">
+    
+                </div>
+                
+                <div class="form_div">
+                    <label for="genre_id">Genero</label>
+                    <select name="genre_id" id="">
+                        <option value="" hidden selected>Seleccionar genero</option>
+                        <% genres.forEach(genre => { %>
+                            <option value=" <%=genre.id%>" <%= genre.id === Movie.genre_id && 'selected' %>><%=genre.name %></option>
+                            
+                            <% }) %>
+                        </select>
+                        
+                    </div>
+                    
+              
+    
+                <button class="botonAgregar" type="submit">Agregar</button>
+                
+    
+            </form>
+        </section>
+    </main>
+    <%- include("./partials/footer.ejs") %> 
+
+
+
+
+
+
 </body>
 
 </html>
