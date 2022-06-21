@@ -16,19 +16,21 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER
         },
         awards: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            defaultValue: 0
         },
         release_date: {
             type: dataTypes.DATE
         },
         genre_id : {
             type: dataTypes.INTEGER.UNSIGNED,
+            allowNull: true,
             
         },
         image :{
              
-                type: dataTypes.STRING
-        
+                type: dataTypes.STRING,
+                defaultValue: 'notFound.png'
         },
         description: {
             type: dataTypes.STRING

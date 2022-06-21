@@ -12,47 +12,60 @@
         
         <h2 class="titulo">Agregar Película</h2>
         <section class="formulario_section">
-            <form action="/movies/create" method="POST">
+            <form action="/movies/create" method="POST" enctype="multipart/form-data">
                 <div class="form_div">
                     <label for="title">Titulo</label>
-                    <input type="text" name="title" id="">
+                    <input type="text" name="title" id="" value="<%= locals.old && old.title ? old.title : null  %>">
+                    <% if (locals.errores && errores.title) { %>
+                        <p class="error_form"> <%= errores.title.msg %> </p>
+                    <% } %> 
     
                 </div>
     
                 <div class="form_div">
                     <label for="rating">Calificación</label>
-                    <input type="number" name="rating" id="">
-    
+                    <input type="number" name="rating" id="" value="<%= locals.old && old.rating ? old.rating : null  %>" step="0.1">
+                    <% if (locals.errores && errores.rating) { %>
+                        <p class="error_form"> <%= errores.rating.msg %> </p>
+                    <% } %> 
                 </div>
     
                 <div class="form_div">
                     <label for="awards">Premios</label>
-                    <input type="number" name="awards" id="" >
-    
+                    <input type="number" name="awards" id="" value="<%= locals.old && old.awards ? old.awards : null  %>">
+                    <% if (locals.errores && errores.awards) { %>
+                        <p class="error_form"> <%= errores.awards.msg %> </p>
+                    <% } %> 
                 </div>
     
                 <div class="form_div">
                     <label for="release_date">Fecha de estreno</label>
-                    <input type="date" name="release_date" id="">
-    
+                    <input type="date" name="release_date" id="" value="<%= locals.old && old.release_date ? old.release_date : null  %>">
+                    <% if (locals.errores && errores.release_date) { %>
+                        <p class="error_form"> <%= errores.release_date.msg %> </p>
+                    <% } %> 
                 </div>
     
                 <div class="form_div">
                     <label for="length">Duración</label>
-                    <input type="number" name="length" id="">
-    
+                    <input type="number" name="length" id="" value="<%= locals.old && old.length ? old.length : null  %>">
+                    <% if (locals.errores && errores.length) { %>
+                        <p class="error_form"> <%= errores.length.msg %> </p>
+                    <% } %> 
                 </div>
                 
                 <div class="form_div">
                     <label for="length">Descripción</label>
-                    <textarea name="description" id=""></textarea>
-                    
+                    <textarea name="description" id=""><%= locals.old && old.description ? old.description : null  %></textarea>
+                    <% if (locals.errores && errores.description) { %>
+                        <p class="error_form"> <%= errores.description.msg %> </p>
+                    <% } %> 
                 </div>
 
                 <div class="form_div">
                     <label for="file" class="label_file">Seleccione una imagen <i class="fas fa-camera"></i></label>
-                    <input type="file" class="input_file" name="length" id="">
-    
+                    <input type="file" class="input_file" name="file" id="">
+                    
                 </div>
                 
                 <div class="form_div">
@@ -64,7 +77,9 @@
                             
                             <% }) %>
                         </select>
-                        
+                        <% if (locals.errores && errores.genre_id) { %>
+                            <p class="error_form"> <%= errores.genre_id.msg %> </p>
+                        <% } %> 
                     </div>
                     
               

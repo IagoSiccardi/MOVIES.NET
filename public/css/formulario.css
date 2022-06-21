@@ -59,6 +59,17 @@
     cursor: pointer;
 }
 
+.formulario_main .formulario_section .form_div .error_form {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 2px red;
+    background-color: rgb(0, 0, 0);
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+}
+
 .formulario_main .formulario_section .form_div .label_file i {
     font-size: 20px;
     color: black;
@@ -76,6 +87,8 @@
     width: 100%;
     resize: none;
     height: 100px;
+    border-radius: 10px ;
+    border: none;
 
 }
 
@@ -111,6 +124,11 @@
     
     }
 
+    .formulario_main .formulario_section .form_div .error_form {
+        width: 400px;
+    }
+    
+
     .formulario_main .formulario_section .form_div .input_file {
         
         width: 400px;
@@ -142,6 +160,10 @@
         width: 500px;
     }
     
+
+    .formulario_main .formulario_section .form_div .error_form {
+        width: 500px;
+    }
 }
 
 @media (min-width:1024px) {
