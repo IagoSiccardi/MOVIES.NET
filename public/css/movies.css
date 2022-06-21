@@ -12,6 +12,10 @@
     text-transform: uppercase;
 }
 
+.movies_main .movies_h2 .keyword {
+    color: blueviolet;
+}
+
 .movies_main .movies_add {
     color:white;
     font-size: 16px;
@@ -134,12 +138,27 @@
     
 }
 
+.movies_main .genres_h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    transition: .5s;
+    margin-bottom: 50px;
+    
+}
+
+.movies_main .genres_h3:hover {
+    transform: scale(1.025);
+}
+
+.movies_main .genres_h3 a {
+    color: white;
+}
+
 @media (min-width:480px) {
 
     .movies_main .movies_cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 20px;
         grid-row-gap: 20px;
        
@@ -157,7 +176,6 @@
     .movies_main .movies_cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
         grid-column-gap: 20px;
         grid-row-gap: 20px;
        
@@ -173,7 +191,6 @@
     .movies_main .movies_cards {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, 1fr);
         grid-column-gap: 20px;
         grid-row-gap: 20px;
        

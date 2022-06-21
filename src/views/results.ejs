@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs",{
+        title: "MOVIES.NET | RESULTADOS"
+      }) %> 
+<body>
+    <%- include("./partials/header.ejs") %> 
+
+    <main class="movies_main">
+
+        <% if (movies == []) { %>
+            <h2 class="movies_h2">No encontramos resultados para : <span class="keyword"><%= keyword %></span></h2>
+            <section class="movies_cards">
+                
+            </section>
+        
+        <% }else { %>
+            <h2 class="movies_h2">Resultado para : <span class="keyword"><%= keyword %></span></h2>
+     
+            <section class="movies_cards">
+                <% for( let i = 0; i < movies.length; i++ ) { %>
+                    
+                    <article class="card">
+                        <a href="/movies/detail/<%= movies[i].id %>">
+                            <img src="/img/movies/<%= movies[i].image %> " alt="">
+                        </a>
+                        <span><%= movies[i].title %> </span>
+                    </article>
+                    <% } %>
+                </section>
+        <% } %>
+
+       <h3 class="genres_h3"><a href=""> Ver todas los peliculas</a></h3>
+       
+   </main>
+
+   <%- include("./partials/footer.ejs") %> 
+</body>
+</html>

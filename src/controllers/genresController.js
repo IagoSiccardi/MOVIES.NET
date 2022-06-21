@@ -10,10 +10,22 @@ const genresController = {
             })
     },
     'detail': (req, res) => {
-        db.Genre.findByPk(req.params.id)
-            .then(genre => {
-                res.render('genresDetail.ejs', {genre});
-            });
+      let movies =  db.Movie.findAll({
+            where: {
+                genre_id : req.params.id
+            }
+        })
+
+     let genre = db.Genre.findByPk(req.params.id)
+
+     Promise.all([movies,genre])
+
+     .then(([movies,genre]) => {
+        res.render('genresDetail.ejs', {genre,
+        movies});
+    })
+    .catch(error => console.log(error))
+            
     }
 
 }

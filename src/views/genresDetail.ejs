@@ -4,13 +4,32 @@
         title: "MOVIES.NET | GENRES DETAIL"
       }) %> 
 <body>
-
-    <%- include("./partials/header.ejs) %> 
+    <%- include("./partials/header.ejs") %> 
     
-    <h1><%= genre.name %> </h1>
-    <br>
-    <p>NAME: <%= genre.name %> </p>
-    <p>RANKIG: <%= genre.ranking %> </p>
+    <main class="movies_main">
 
+        <h2 class="movies_h2"> <%= genre.name %></h2>
+
+        <section class="movies_cards">
+            <% for( let i = 0; i < movies.length; i++ ) { %>
+                
+                <article class="card">
+                    <a href="/movies/detail/<%= movies[i].id %>">
+                        <img src="/img/movies/<%= movies[i].image %> " alt="">
+                    </a>
+                    <span><%= movies[i].title %> </span>
+                </article>
+            <% } %>
+
+            
+            
+            
+        </section>
+        <h3 class="genres_h3"><a href=""> Ver todos los generos</a></h3>
+        
+    </main>
+
+
+    <%- include("./partials/footer.ejs") %>
 </body>
 </html>

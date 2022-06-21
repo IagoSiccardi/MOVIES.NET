@@ -2,13 +2,14 @@ const moment = require("moment");
 const db = require("../database/models");
 const sequelize = db.sequelize;
 
-//Otra forma de llamar a los modelos
-const Movies = db.Movie;
-
 const moviesController = {
+
+
   list: (req, res) => {
     db.Movie.findAll().then((movies) => {
-      res.render("moviesList.ejs", { movies });
+
+
+      return res.render("moviesList.ejs", { movies });
     });
   },
   detail: (req, res) => {

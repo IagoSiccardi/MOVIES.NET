@@ -96,6 +96,7 @@
 
 .header_search input {
     padding: 10px;
+    
     border: none;
     border-radius: 50px;
     min-width: 200px;

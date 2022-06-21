@@ -6,15 +6,30 @@
 <body>
     <%- include("./partials/header.ejs") %> 
 
-    <h1>PELIÍCULAS ORDENADAS POR FECHA</h1>
-    <ul>
-        <% for( let i = 0; i < movies.length; i++ ) { %>
-        <li>
-            <a href="/movies/detail/<%=movies[i].id%>"><%= movies[i].title %> </a> <br>
-            <%= 'RELEASE DATE: ' + movies[i].release_date %> 
-        </li>
-        <% } %>
+     <main class="movies_main">
+
+        <h2 class="movies_h2">Estrenos</h2>
+
+        <section class="movies_cards">
+            <% for( let i = 0; i < movies.length; i++ ) { %>
+                
+                <article class="card">
+                    <a href="/movies/detail/<%= movies[i].id %>">
+                        <img src="/img/movies/<%= movies[i].image %> " alt="">
+                    </a>
+                    <span><%= movies[i].title %> </span>
+                </article>
+            <% } %>
+
+            
+            
+            
+        </section>
+        <h3 class="genres_h3"><a href=""> Ver todas los peliculas</a></h3>
         
-    </ul>
+    </main>
+
+    <%- include("./partials/footer.ejs") %> 
+
 </body>
 </html>
