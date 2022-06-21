@@ -124,6 +124,7 @@ const moviesController = {
     const errors = validationResult(req)
 
     if (errors.isEmpty()) {
+
       db.Movie.update({
           title: title.trim(),
           rating: +rating,
@@ -132,7 +133,7 @@ const moviesController = {
           length: +length,
           genre_id: +genre_id,
           description: description.trim(),
-          image: req.file ? req.file.filename : null
+          image: req.file ? req.file.filename : 'notFound.png'
         },
         {
           where: { id: req.params.id },
